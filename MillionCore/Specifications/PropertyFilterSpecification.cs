@@ -21,7 +21,7 @@ namespace MillionCore.Specifications
           
             if (!string.IsNullOrEmpty(location))
             {
-                AddCriteria(p => p.Address.Contains(location));
+                AddCriteria(p => p.Address.ToLower().Contains(location.ToLower()));
             }
           
             if (minPrice.HasValue)
@@ -41,13 +41,29 @@ namespace MillionCore.Specifications
           
             if (!string.IsNullOrEmpty(ownerName))
             {
-                AddCriteria(p => p.Owner.Name.Contains(ownerName));
+                AddCriteria(p => p.Owner.Name.ToLower().Contains(ownerName.ToLower()));
             }
 
             if (!string.IsNullOrEmpty(internalCode))
             {
-                AddCriteria(p => p.CodeInternal.Contains(internalCode));
+                AddCriteria(p => p.CodeInternal.ToLower().Contains(internalCode.ToLower()));
             }
+        }
+
+
+        public void AddPagination(int pageIndex=0, int pageSize=10)
+        {
+            this.ApplyPaging(pageIndex * pageSize, pageSize); 
+        }
+
+        public void AddOrderBy(Expression<Func<Property, object>> orderByExpression)
+        {
+            this.ApplyOrderBy(orderByExpression);
+        }
+
+        public void AddOrderByDescending(Expression<Func<Property, object>> orderByExpression)
+        {
+            this.ApplyOrderByDescending(orderByExpression);
         }
     }
 }

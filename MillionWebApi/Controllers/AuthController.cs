@@ -6,15 +6,20 @@ using MillionWebApi.Utils;
 
 namespace MillionWebApi.Controllers
 {
+    public class LoginResponse
+    {
+        public string Token { get; set; }
+    }
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly TokenService _tokenService;
+        private readonly ITokenService _tokenService;
         private readonly IAuthService _authService;
 
 
-        public AuthController(TokenService tokenService, IAuthService authService)
+        public AuthController(ITokenService tokenService, IAuthService authService)
         {
             _tokenService = tokenService;
             _authService = authService;
@@ -26,7 +31,7 @@ namespace MillionWebApi.Controllers
             if (_authService.ValidateCredentials(request.Email, request.Password))
             {
                 var token = _tokenService.GenerateFakeJwtToken(request.Email);
-                return Ok(new { Token = token });
+                return Ok(new LoginResponse { Token = token });
             }
 
             return Unauthorized();

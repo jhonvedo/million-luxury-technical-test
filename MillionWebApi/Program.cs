@@ -52,7 +52,7 @@ builder.Services.AddDbContext<MillionDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-builder.Services.AddSingleton<TokenService>(serviceProvider =>
+builder.Services.AddSingleton<ITokenService,TokenService>(serviceProvider =>
 {
     var settings = serviceProvider.GetRequiredService<IOptions<TokenSettings>>().Value;
     return new TokenService(settings);

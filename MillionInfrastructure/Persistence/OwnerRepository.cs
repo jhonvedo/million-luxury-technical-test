@@ -32,16 +32,26 @@ namespace MillionInfrastructure.Persistence
                 .ToListAsync();
         }
 
-        public async Task AddAsync(Owner owner)
+        public async Task<Owner> AddAsync(Owner owner)
         {
             await _dbContext.Owners.AddAsync(owner);
             await _dbContext.SaveChangesAsync();
+            return owner;
         }
 
-        public async Task UpdateAsync(Owner owner)
-        {
+        public async Task<Owner> UpdateAsync(Owner owner)
+        {           
+            var existingOwner = await _dbContext.Owners.FindAsync(owner.IdOwner);
+            if (existingOwner == null)
+            {
+                throw new InvalidOperationException($"Owner with Id {owner.IdOwner} not found.");
+            }
+
+            _dbContext.Entry(existingOwner).State = EntityState.Detached;
             _dbContext.Owners.Update(owner);
             await _dbContext.SaveChangesAsync();
+
+            return owner;
         }
 
         public async Task DeleteAsync(int id)

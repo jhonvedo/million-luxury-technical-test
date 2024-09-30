@@ -12,10 +12,10 @@ namespace MillionCore.Specifications
        
         public List<Expression<Func<T, bool>>> Criteria { get; } = new List<Expression<Func<T, bool>>>();
 
-        public Expression<Func<T, object>> OrderBy { get; private set; }
+        public Expression<Func<T, object>>? OrderBy { get; private set; }
 
        
-        public Expression<Func<T, object>> OrderByDescending { get; private set; }
+        public Expression<Func<T, object>>? OrderByDescending { get; private set; }
 
      
         public int Take { get; private set; }
@@ -31,11 +31,13 @@ namespace MillionCore.Specifications
         protected void ApplyOrderBy(Expression<Func<T, object>> orderByExpression)
         {
             OrderBy = orderByExpression;
+            OrderByDescending = null;
         }
 
         protected void ApplyOrderByDescending(Expression<Func<T, object>> orderByDescExpression)
         {
             OrderByDescending = orderByDescExpression;
+            OrderBy = null;
         }
        
         protected void ApplyPaging(int skip, int take)

@@ -23,10 +23,10 @@ namespace MillionInfrastructure.Services
     {
         private readonly AzureStorageSettings _settings;
         private readonly BlobServiceClient _blobServiceClient;
-        public AzureStorageService(AzureStorageSettings settings)
+        public AzureStorageService(AzureStorageSettings settings, BlobServiceClient blobServiceClient = null)
         {
             _settings = settings;
-            _blobServiceClient = new BlobServiceClient(settings.ConnectionString);
+            _blobServiceClient = blobServiceClient == null ? new BlobServiceClient(settings.ConnectionString) : blobServiceClient;
         }
 
         public async Task<string> SaveImageAsync(byte[] imageData, string fileName)

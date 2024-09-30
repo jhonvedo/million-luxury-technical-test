@@ -11,7 +11,11 @@ namespace MillionWebApi.Utils
         public string Audience { get; set; }
         public string Issuer { get; set; }
     }
-    public class TokenService
+    public interface ITokenService
+    {
+        string GenerateFakeJwtToken(string email);
+    }
+    public class TokenService : ITokenService
     {
         private readonly TokenSettings _tokenSettings;
         public TokenService(TokenSettings tokenSettings)

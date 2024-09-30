@@ -30,10 +30,7 @@ namespace MillionInfrastructure.Persistence
 
         public async Task<IEnumerable<Property>> ListAsync()
         {
-            return await _dbContext.Properties
-                .Include(p => p.PropertyImages)
-                .Include(p => p.Owner)
-                .ToListAsync();
+            return await _dbContext.Properties.ToListAsync();
         }
 
         public async Task<Property> AddAsync(Property property)
@@ -44,9 +41,17 @@ namespace MillionInfrastructure.Persistence
         }
 
         public async Task<Property> UpdateAsync(Property property)
-        {
+        {           
+            var existingProperty = await _dbContext.Properties.FindAsync(property.IdProperty);
+            if (existingProperty == null)
+            {
+                throw new InvalidOperationException($"Property with Id {property.IdProperty} not found.");
+            }
+
+            _dbContext.Entry(existingProperty).State = EntityState.Detached;
             _dbContext.Properties.Update(property);
             await _dbContext.SaveChangesAsync();
+
             return property;
         }
 
@@ -75,7 +80,17 @@ namespace MillionInfrastructure.Persistence
             if (filter.IsPagingEnabled)
             {
                 query = query.Skip(filter.Skip).Take(filter.Take);
-            }           
+            }    
+            
+            if(filter.OrderBy != null)
+            {
+                query = query.OrderBy(filter.OrderBy);
+            }
+
+            if (filter.OrderByDescending != null)
+            {
+                query = query.OrderByDescending(filter.OrderByDescending);
+            }
 
             return await query.ToListAsync();
         }

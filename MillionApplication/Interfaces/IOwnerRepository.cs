@@ -10,8 +10,8 @@ namespace MillionApplication.Interfaces
     public interface IOwnerRepository
     {
         Task<Owner?> GetByIdAsync(int id);      
-        Task AddAsync(Owner propertyImage);
-        Task UpdateAsync(Owner propertyImage);
+        Task<Owner> AddAsync(Owner propertyImage);
+        Task<Owner> UpdateAsync(Owner propertyImage);
         Task DeleteAsync(int id);
     }
 }
