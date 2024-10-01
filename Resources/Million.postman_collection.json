@@ -105,7 +105,7 @@
 					]
 				},
 				"url": {
-					"raw": "{{host}}/api/property/Image/1",
+					"raw": "{{host}}/api/property/Image/6",
 					"host": [
 						"{{host}}"
 					],
@@ -113,7 +113,7 @@
 						"api",
 						"property",
 						"Image",
-						"1"
+						"6"
 					]
 				}
 			},
@@ -323,6 +323,189 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"idProperty\": 902,\n    \"name\": \"Property from postman2 edited\",\n    \"address\": \"Address 1, City, State\",\n    \"price\": 101000,\n    \"codeInternal\": \"NX-002\",\n    \"year\": 2020,\n    \"idOwner\": 9,\n    \"images\": [],\n    \"traces\": [],\n    \"owner\": {\n        \"idOwner\": 0,\n        \"name\": \"Linda Clark\",\n        \"address\": \"369 Pine Avenue, Portland, OR\",\n        \"photo\": null,\n        \"birthday\": \"1992-08-17T00:00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Change Price",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 12345.67\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/property/859/price",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property",
+						"859",
+						"price"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 12345.67\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/property/859/price",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"859",
+								"price"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 15:01:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idProperty\": 859,\n    \"name\": \"Property 259\",\n    \"address\": \"Address 259, City, State\",\n    \"price\": 12345.67,\n    \"codeInternal\": \"PROP259\",\n    \"year\": 2011,\n    \"idOwner\": 6,\n    \"images\": [\n        {\n            \"idPropertyImage\": 2,\n            \"file\": \"https://milliontest.blob.core.windows.net/images/2965eaa7-7de7-4fb6-a6ed-41aa401130fd.jpg\",\n            \"enabled\": true\n        },\n        {\n            \"idPropertyImage\": 3,\n            \"file\": \"https://milliontest.blob.core.windows.net/images/94bda203-6509-4147-b3ee-c043c23f21a8.jpg\",\n            \"enabled\": true\n        },\n        {\n            \"idPropertyImage\": 4,\n            \"file\": \"https://milliontest.blob.core.windows.net/images/758b3b3c-4916-40f0-9219-368118f0baaf.jpg\",\n            \"enabled\": true\n        },\n        {\n            \"idPropertyImage\": 5,\n            \"file\": \"https://milliontest.blob.core.windows.net/images/93304993-3513-4071-b5e4-13cf2366d7d6.jpg\",\n            \"enabled\": true\n        }\n    ],\n    \"traces\": [\n        {\n            \"idPropertyTrace\": 51,\n            \"dateSale\": \"2024-07-23T22:12:29.1633333\",\n            \"name\": \"Trace 1\",\n            \"value\": 74015,\n            \"tax\": 0\n        }\n    ],\n    \"owner\": {\n        \"idOwner\": 6,\n        \"name\": \"David Johnson\",\n        \"address\": \"987 Birch Lane, New York, NY\",\n        \"photo\": null,\n        \"birthday\": \"1988-02-19T00:00:00\"\n    }\n}"
+				},
+				{
+					"name": "Zero",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/property/859/price",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"859",
+								"price"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 15:01:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"StatusCode\": 500,\n    \"Message\": \"An error occurred while processing your request.\",\n    \"Detailed\": \"newPrice should be positive number\"\n}"
+				},
+				{
+					"name": "Negative",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": -12345.67\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/property/859/price",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"859",
+								"price"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 15:02:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"StatusCode\": 500,\n    \"Message\": \"An error occurred while processing your request.\",\n    \"Detailed\": \"newPrice should be positive number\"\n}"
 				}
 			]
 		},

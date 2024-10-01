@@ -357,6 +357,26 @@ namespace MillionApplication.Test.Services
         }
 
         [Test]
+        public async Task ChangePropertyPriceAsync_ShouldThowException_WhenPriceIsNegativeOrZero()
+        {
+            Mock<IPropertyRepository> propertyRepositoryMock = new Mock<IPropertyRepository>();
+
+            propertyRepositoryMock
+               .Setup(repo => repo.GetByIdAsync(1))
+               .ReturnsAsync((Property)null);
+
+
+            PropertyService propertyService = new PropertyService(propertyRepositoryMock.Object, _mapper);
+
+            var exceptionWithZero = Assert.ThrowsAsync<Exception>(() => propertyService.ChangePropertyPriceAsync(1, 0));
+            Assert.That(exceptionWithZero.Message, Is.EqualTo("newPrice should be positive number"));
+
+            var exceptionWithNegative = Assert.ThrowsAsync<Exception>(() => propertyService.ChangePropertyPriceAsync(1, -100));
+            Assert.That(exceptionWithNegative.Message, Is.EqualTo("newPrice should be positive number"));
+
+        }
+
+        [Test]
         public void TaskCreatePropertyAsync_ShouldThrowException_IfInternalCodeAlreadyExist()
         {
             var existingProperty = new Property

@@ -84,7 +84,7 @@ namespace MillionWebApi.Tests.Controllers
 
             _propertyServiceMock.Setup(x => x.ChangePropertyPriceAsync(propertyId, newPrice)).ReturnsAsync(updatedProperty);
 
-            var result = await _propertyController.UpdatePropertyPrice(propertyId, newPrice);
+            var result = await _propertyController.UpdatePropertyPrice(propertyId, new Models.UpdatePriceInput() { Price = newPrice });
 
             var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
@@ -102,7 +102,7 @@ namespace MillionWebApi.Tests.Controllers
 
             _propertyServiceMock.Setup(x => x.ChangePropertyPriceAsync(propertyId, newPrice)).ReturnsAsync((PropertyDto)null);
 
-            var result = await _propertyController.UpdatePropertyPrice(propertyId, newPrice);
+            var result = await _propertyController.UpdatePropertyPrice(propertyId, new Models.UpdatePriceInput() { Price = newPrice });
 
             Assert.IsInstanceOf<NotFoundResult>(result);
         }

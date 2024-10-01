@@ -4,6 +4,7 @@ using MillionApplication.DTOs;
 using MillionApplication.Interfaces;
 using MillionWebApi.Controllers;
 using MillionWebApi.Handlers;
+using MillionWebApi.Models;
 using Moq;
 using System;
 using System.Collections.Generic;

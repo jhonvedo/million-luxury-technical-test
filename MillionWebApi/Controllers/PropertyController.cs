@@ -3,11 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using MillionApplication.DTOs;
 using MillionApplication.Interfaces;
 using MillionWebApi.Handlers;
+using MillionWebApi.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MillionWebApi.Controllers
 {
+
+
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
@@ -49,9 +52,9 @@ namespace MillionWebApi.Controllers
         [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(PropertyDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ServiceErrorResponse), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> UpdatePropertyPrice(int id, [FromBody] decimal newPrice)
+        public async Task<IActionResult> UpdatePropertyPrice(int id, [FromBody] UpdatePriceInput priceInput)
         {
-            var updatedProperty = await _propertyService.ChangePropertyPriceAsync(id, newPrice);
+            var updatedProperty = await _propertyService.ChangePropertyPriceAsync(id, priceInput.Price);
 
             if (updatedProperty == null)
             {

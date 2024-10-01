@@ -53,7 +53,7 @@ namespace MillionApplication.Services
 
             var spec = new PropertyFilterSpecification(internalCode: propertyDto.CodeInternal);   
             var propertiesWithInternalCode = await _propertyRepository.GetAllAsync(spec);
-            if (propertiesWithInternalCode != null)
+            if (propertiesWithInternalCode != null && propertiesWithInternalCode.Count() > 0)
             {
                 throw new Exception("Internal code already exists");
             }
@@ -87,6 +87,11 @@ namespace MillionApplication.Services
 
         public async Task<PropertyDto> ChangePropertyPriceAsync(int id, decimal newPrice)
         {
+            if (newPrice <= 0)
+            {
+                throw new Exception("newPrice should be positive number");
+            }
+
             var property = await _propertyRepository.GetByIdAsync(id);
             if (property != null)
             {               

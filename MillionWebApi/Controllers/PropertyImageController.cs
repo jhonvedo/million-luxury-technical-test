@@ -5,6 +5,7 @@ using MillionApplication.DTOs;
 using MillionApplication.Interfaces;
 using MillionApplication.Services;
 using MillionWebApi.Handlers;
+using MillionWebApi.Models;
 using System.IO;
 
 namespace MillionWebApi.Controllers

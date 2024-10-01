@@ -1,15 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using MillionWebApi.Models;
+using Newtonsoft.Json;
 using System.Net;
 
 namespace MillionWebApi.Handlers
-{
-
-    public class ServiceErrorResponse
-    {
-        public int StatusCode { get; set; }
-        public string Message { get; set; }
-        public string Detailed { get; set; }
-    }
+{   
     public class ExceptionHandlingMiddleware : IMiddleware
     {
 
