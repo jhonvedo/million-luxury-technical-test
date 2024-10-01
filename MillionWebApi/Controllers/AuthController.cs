@@ -25,7 +25,10 @@ namespace MillionWebApi.Controllers
             _authService = authService;
         }
 
+     
         [HttpPost("login")]
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)]
         public IActionResult Login([FromBody] LoginRequest request)
         {
             if (_authService.ValidateCredentials(request.Email, request.Password))

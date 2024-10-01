@@ -1,6 +1,6 @@
 ﻿using MillionApplication.Interfaces;
 using MillionApplication.Services;
-using MillionCore.Entities;
+using MillionDomain.Entities;
 using Moq;
 using System;
 using System.Collections.Generic;

@@ -231,14 +231,14 @@ var assemblies = [
       { "name": "MillionApplication.Services.PropertyService", "rp": "MillionApplication_PropertyService.html", "cl": 0, "ucl": 54, "cal": 54, "tl": 102, "cb": 0, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
-    "name": "MillionCore",
+    "name": "MillionDomain",
     "classes": [
-      { "name": "MillionCore.Entities.Owner", "rp": "MillionCore_Owner.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Entities.Property", "rp": "MillionCore_Property.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Entities.PropertyImage", "rp": "MillionCore_PropertyImage.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Entities.PropertyTrace", "rp": "MillionCore_PropertyTrace.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Specifications.BaseSpecification<T>", "rp": "MillionCore_BaseSpecification_1.html", "cl": 0, "ucl": 22, "cal": 22, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Specifications.PropertyFilterSpecification", "rp": "MillionCore_PropertyFilterSpecification.html", "cl": 0, "ucl": 42, "cal": 42, "tl": 69, "cb": 0, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.Owner", "rp": "MillionDomain_Owner.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.Property", "rp": "MillionDomain_Property.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.PropertyImage", "rp": "MillionDomain_PropertyImage.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.PropertyTrace", "rp": "MillionDomain_PropertyTrace.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Specifications.BaseSpecification<T>", "rp": "MillionDomain_BaseSpecification_1.html", "cl": 0, "ucl": 22, "cal": 22, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Specifications.PropertyFilterSpecification", "rp": "MillionDomain_PropertyFilterSpecification.html", "cl": 0, "ucl": 42, "cal": 42, "tl": 69, "cb": 0, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "MillionInfrastructure",
@@ -278,7 +278,7 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "MillionCore", "class": "MillionCore.Specifications.PropertyFilterSpecification", "reportPath": "MillionCore_PropertyFilterSpecification.html", "methodName": ".ctor(System.String,System.Nullable`1<System.Decimal>,System.Nullable`1<System.Decimal>,System.Nullable`1<System.Int32>,System.String,System.String)", "methodShortName": ".ctor(...)", "fileIndex": 0, "line": 13,
+    "assembly": "MillionDomain", "class": "MillionDomain.Specifications.PropertyFilterSpecification", "reportPath": "MillionDomain_PropertyFilterSpecification.html", "methodName": ".ctor(System.String,System.Nullable`1<System.Decimal>,System.Nullable`1<System.Decimal>,System.Nullable`1<System.Int32>,System.String,System.String)", "methodShortName": ".ctor(...)", "fileIndex": 0, "line": 13,
     "metrics": [
       { "value": 156, "exceeded": true },
       { "value": 12, "exceeded": false },

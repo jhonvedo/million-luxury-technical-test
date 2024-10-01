@@ -36,8 +36,8 @@ namespace MillionWebApi.Tests.Controllers
             _propertyServiceMock.Setup(x => x.GetAllPropertiesAsync(filters)).ReturnsAsync(properties);
             
             var result = await _propertyController.GetAllPropertiesAsync(filters);
-          
-            var okResult = result.Result as OkObjectResult;
+
+            var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
             Assert.AreEqual(200, okResult.StatusCode);
             var returnedProperties = okResult.Value as IEnumerable<PropertyDto>;

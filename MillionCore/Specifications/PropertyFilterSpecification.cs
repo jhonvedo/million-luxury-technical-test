@@ -1,4 +1,4 @@
-﻿using MillionCore.Entities;
+﻿using MillionDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 
-namespace MillionCore.Specifications
+namespace MillionDomain.Specifications
 {
     public class PropertyFilterSpecification : BaseSpecification<Property>
     {

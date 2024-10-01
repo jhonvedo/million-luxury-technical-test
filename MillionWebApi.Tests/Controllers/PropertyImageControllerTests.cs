@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MillionApplication.DTOs;
 using MillionApplication.Interfaces;
 using MillionWebApi.Controllers;
+using MillionWebApi.Handlers;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -75,7 +76,10 @@ namespace MillionWebApi.Tests.Controllers
             var badRequestResult = result as BadRequestObjectResult;
             Assert.IsNotNull(badRequestResult); 
             Assert.AreEqual(400, badRequestResult.StatusCode);
-            Assert.AreEqual("No image file uploaded.", badRequestResult.Value); 
+            var apiReturn = badRequestResult.Value as ServiceErrorResponse;
+            Assert.AreEqual("No image file uploaded.", apiReturn.Message);
+            Assert.AreEqual("No image file uploaded.", apiReturn.Detailed);
+            Assert.AreEqual(StatusCodes.Status400BadRequest, apiReturn.StatusCode);
         }
 
         [Test]

@@ -22,7 +22,7 @@ namespace MillionInfrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MillionCore.Entities.Owner", b =>
+            modelBuilder.Entity("MillionDomain.Entities.Owner", b =>
                 {
                     b.Property<int>("IdOwner")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace MillionInfrastructure.Migrations
                     b.ToTable("Owners");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.Property", b =>
+            modelBuilder.Entity("MillionDomain.Entities.Property", b =>
                 {
                     b.Property<int>("IdProperty")
                         .ValueGeneratedOnAdd()
@@ -88,7 +88,7 @@ namespace MillionInfrastructure.Migrations
                     b.ToTable("Properties");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.PropertyImage", b =>
+            modelBuilder.Entity("MillionDomain.Entities.PropertyImage", b =>
                 {
                     b.Property<int>("IdPropertyImage")
                         .ValueGeneratedOnAdd()
@@ -113,7 +113,7 @@ namespace MillionInfrastructure.Migrations
                     b.ToTable("PropertyImages");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.PropertyTrace", b =>
+            modelBuilder.Entity("MillionDomain.Entities.PropertyTrace", b =>
                 {
                     b.Property<int>("IdPropertyTrace")
                         .ValueGeneratedOnAdd()
@@ -144,9 +144,9 @@ namespace MillionInfrastructure.Migrations
                     b.ToTable("PropertyTraces");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.Property", b =>
+            modelBuilder.Entity("MillionDomain.Entities.Property", b =>
                 {
-                    b.HasOne("MillionCore.Entities.Owner", "Owner")
+                    b.HasOne("MillionDomain.Entities.Owner", "Owner")
                         .WithMany("Properties")
                         .HasForeignKey("IdOwner")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -155,9 +155,9 @@ namespace MillionInfrastructure.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.PropertyImage", b =>
+            modelBuilder.Entity("MillionDomain.Entities.PropertyImage", b =>
                 {
-                    b.HasOne("MillionCore.Entities.Property", "Property")
+                    b.HasOne("MillionDomain.Entities.Property", "Property")
                         .WithMany("PropertyImages")
                         .HasForeignKey("IdProperty")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -166,9 +166,9 @@ namespace MillionInfrastructure.Migrations
                     b.Navigation("Property");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.PropertyTrace", b =>
+            modelBuilder.Entity("MillionDomain.Entities.PropertyTrace", b =>
                 {
-                    b.HasOne("MillionCore.Entities.Property", "Property")
+                    b.HasOne("MillionDomain.Entities.Property", "Property")
                         .WithMany("PropertyTraces")
                         .HasForeignKey("IdProperty")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -177,12 +177,12 @@ namespace MillionInfrastructure.Migrations
                     b.Navigation("Property");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.Owner", b =>
+            modelBuilder.Entity("MillionDomain.Entities.Owner", b =>
                 {
                     b.Navigation("Properties");
                 });
 
-            modelBuilder.Entity("MillionCore.Entities.Property", b =>
+            modelBuilder.Entity("MillionDomain.Entities.Property", b =>
                 {
                     b.Navigation("PropertyImages");
 

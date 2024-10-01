@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MillionInfrastructure", "Mi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MillionWebApi", "MillionWebApi\MillionWebApi.csproj", "{72CDF9F0-9835-41B5-A8BA-2A7CC446A43B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MillionCore", "MillionCore\MillionCore.csproj", "{97D7FC7F-445B-4441-AC35-0BA29300A89C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MillionDomain", "MillionCore\MillionDomain.csproj", "{97D7FC7F-445B-4441-AC35-0BA29300A89C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MillionApplication.Test", "MillionApplication.Test\MillionApplication.Test.csproj", "{12C1A561-37BA-41CB-85EC-DE5FC2CED2C6}"
 EndProject

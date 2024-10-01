@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MillionApplication.Interfaces;
-using MillionCore.Entities;
-using MillionCore.Specifications;
+using MillionDomain.Entities;
+using MillionDomain.Specifications;
 using MillionInfrastructure.Persistence;
 using System;
 using System.Collections.Generic;

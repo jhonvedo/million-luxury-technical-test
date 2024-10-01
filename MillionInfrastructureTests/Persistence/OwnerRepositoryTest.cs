@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MillionApplication.Services;
-using MillionCore.Entities;
+using MillionDomain.Entities;
 using MillionInfrastructure.Persistence;
 using System;
 using System.Collections.Generic;

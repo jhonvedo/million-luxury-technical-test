@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MillionCore.Specifications
+namespace MillionDomain.Specifications
 {
     public abstract class BaseSpecification<T>
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MillionCore.Entities;
+using MillionDomain.Entities;
 using MillionInfrastructure.Persistence;
 using Moq;
 using Moq.EntityFrameworkCore;

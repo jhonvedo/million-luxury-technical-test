@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MillionCore\MillionCore.csproj" />
+    <ProjectReference Include="..\MillionCore\MillionDomain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,8 +4,8 @@ using MillionApplication.DTOs;
 using MillionApplication.Interfaces;
 using MillionApplication.Mapping;
 using MillionApplication.Services;
-using MillionCore.Entities;
-using MillionCore.Specifications;
+using MillionDomain.Entities;
+using MillionDomain.Specifications;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -510,8 +510,8 @@ namespace MillionApplication.Test.Services
 
             var filters = new PropertyFilterDto
             {
-                Address = "123, Fake city",
                 MinPrice = 10000,
+                Address = "123, Fake city",
                 MaxPrice = 20000,
                 OwnerName = "Mr. Smith",
                 Year = 2024,
@@ -541,11 +541,11 @@ namespace MillionApplication.Test.Services
             
             var expectedValues = new Dictionary<string, object>
             {
-                { "Address", expectedFilters.Address },
+                { "Address", expectedFilters.Address?.ToLower() },
                 { "Price.GreaterThanOrEqual", expectedFilters.MinPrice },
                 { "Price.LessThanOrEqual", expectedFilters.MaxPrice }, 
-                { "CodeInternal", expectedFilters.InternalCode },
-                { "Name", expectedFilters.OwnerName },
+                { "CodeInternal", expectedFilters.InternalCode?.ToLower() },
+                { "Name", expectedFilters.OwnerName?.ToLower() },
                 { "Year", expectedFilters.Year }
             };
 
@@ -584,6 +584,19 @@ namespace MillionApplication.Test.Services
                         return value.Equals(expectedValue.ToString());
                     }
                 }
+                else if (methodCall.Method.Name == "Contains" && methodCall.Object is MethodCallExpression callExpression)
+                {
+                    //check if is toLower or ToUpper
+                    if (callExpression.Method.Name == "ToLower" || callExpression.Method.Name == "ToUpper")
+                    {
+                        if (callExpression.Object is MemberExpression transformedMemberExpression &&
+                            transformedMemberExpression.Member.Name == propertyName)
+                        {
+                            var value = ExtractValueFromExpression(methodCall.Arguments[0]);
+                            return value.Equals(expectedValue.ToString(), StringComparison.OrdinalIgnoreCase);
+                        }
+                    }
+                }
             }
             else if (expression.Body is BinaryExpression binaryExpression)
             {
@@ -614,6 +627,13 @@ namespace MillionApplication.Test.Services
             {
                 return ExtractValueFromExpression(unaryExpression.Operand);
             }
+            else if (expression is MethodCallExpression methodCallExpression)
+            {              
+                var compiledLambda = Expression.Lambda(methodCallExpression).Compile();
+                var result = compiledLambda.DynamicInvoke();
+              
+                return result?.ToString();
+            }
 
             return null;
         }
@@ -621,20 +641,44 @@ namespace MillionApplication.Test.Services
         {
             if (criterion.Body is MethodCallExpression methodCall)
             {
+                // If the method call has an object (like p.Address.ToLower())
                 if (methodCall.Object is MemberExpression memberExpression)
                 {
-                    return (memberExpression.Member.Name, null); 
+                    return (memberExpression.Member.Name, null);
+                }
+                else if (methodCall.Object is MethodCallExpression callExpression)
+                {
+                    // Recursively get the member name from the chained method calls
+                    var propertyName = GetPropertyNameFromMethodCall(callExpression);
+                    return (propertyName, null);
                 }
             }
             else if (criterion.Body is BinaryExpression binaryExpression)
             {
                 if (binaryExpression.Left is MemberExpression leftMemberExpression)
-                {                   
+                {
                     return (leftMemberExpression.Member.Name, binaryExpression.NodeType);
                 }
             }
-            return (null, null); 
+
+            return (null, null);
         }
 
+        private string GetPropertyNameFromMethodCall(MethodCallExpression methodCall)
+        {
+            // If the method call has an object (like p.Address.ToLower())
+            if (methodCall.Object is MemberExpression memberExpression)
+            {
+                return memberExpression.Member.Name;
+            }
+
+            // If the method call is chained, recursively call this method on the object
+            if (methodCall.Object is MethodCallExpression innerCall)
+            {
+                return GetPropertyNameFromMethodCall(innerCall);
+            }
+
+            return null; // Return null if no property name could be found
+        }
     }
 }

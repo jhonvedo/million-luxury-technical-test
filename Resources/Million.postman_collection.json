@@ -1,0 +1,687 @@
+{
+	"info": {
+		"_postman_id": "3b28613b-7815-487a-bb3b-3fd9f4f35583",
+		"name": "Million",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16189415"
+	},
+	"item": [
+		{
+			"name": "Add Property File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/property/859/Image",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property",
+						"859",
+						"Image"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/property/902/Image",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"902",
+								"Image"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 02:25:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idPropertyImage\": 2,\n    \"file\": \"https://milliontest.blob.core.windows.net/images/9aca1146-d285-4936-ab7c-066b991acd65.jpg\",\n    \"enabled\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Property File",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/property/Image/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property",
+						"Image",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/property/902/Image",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"902",
+								"Image"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 02:25:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idPropertyImage\": 2,\n    \"file\": \"https://milliontest.blob.core.windows.net/images/9aca1146-d285-4936-ab7c-066b991acd65.jpg\",\n    \"enabled\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Create property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{      \r\n        \"name\": \"Property from postman2\",\r\n        \"address\": \"Address 1, City, State\",\r\n        \"price\": 101000.00,\r\n        \"codeInternal\": \"NX-002\",\r\n        \"year\": 2020,\r\n        \"idOwner\": 9        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/property",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \r\n        \"name\": \"Property from postman2\",\r\n        \"address\": \"Address 1, City, State\",\r\n        \"price\": 101000.00,\r\n        \"codeInternal\": \"NX-002\",\r\n        \"year\": 2020,\r\n        \"idOwner\": 9        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/property",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 01:24:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idProperty\": 902,\n    \"name\": \"Property from postman2\",\n    \"address\": \"Address 1, City, State\",\n    \"price\": 101000,\n    \"codeInternal\": \"NX-002\",\n    \"year\": 2020,\n    \"idOwner\": 9,\n    \"images\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Update property",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProperty\": 902,\r\n    \"name\": \"Property from postman2 edited\",\r\n    \"address\": \"Address 1, City, State\",\r\n    \"price\": 101000.00,\r\n    \"codeInternal\": \"NX-002\",\r\n    \"year\": 2020,\r\n    \"idOwner\": 9,\r\n    \"images\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/property",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProperty\": 902,\r\n    \"name\": \"Property from postman2 edited\",\r\n    \"address\": \"Address 1, City, State\",\r\n    \"price\": 101000.00,\r\n    \"codeInternal\": \"NX-002\",\r\n    \"year\": 2020,\r\n    \"idOwner\": 9,\r\n    \"images\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/property",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 02:23:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idProperty\": 902,\n    \"name\": \"Property from postman2 edited\",\n    \"address\": \"Address 1, City, State\",\n    \"price\": 101000,\n    \"codeInternal\": \"NX-002\",\n    \"year\": 2020,\n    \"idOwner\": 9,\n    \"images\": [],\n    \"traces\": [],\n    \"owner\": {\n        \"idOwner\": 0,\n        \"name\": \"Linda Clark\",\n        \"address\": \"369 Pine Avenue, Portland, OR\",\n        \"photo\": null,\n        \"birthday\": \"1992-08-17T00:00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Property",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/property/859",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property",
+						"859"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/property/902",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"902"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 02:39:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idProperty\": 902,\n    \"name\": \"Property from postman2 edited\",\n    \"address\": \"Address 1, City, State\",\n    \"price\": 101000,\n    \"codeInternal\": \"NX-002\",\n    \"year\": 2020,\n    \"idOwner\": 9,\n    \"images\": [],\n    \"traces\": [],\n    \"owner\": {\n        \"idOwner\": 0,\n        \"name\": \"Linda Clark\",\n        \"address\": \"369 Pine Avenue, Portland, OR\",\n        \"photo\": null,\n        \"birthday\": \"1992-08-17T00:00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Properties",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/property",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"property"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "price range",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/property?minPrice=100000&maxPrice=101000",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property"
+							],
+							"query": [
+								{
+									"key": "minPrice",
+									"value": "100000"
+								},
+								{
+									"key": "maxPrice",
+									"value": "101000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 01:09:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idProperty\": 601,\n        \"name\": \"Property 1\",\n        \"address\": \"Address 1, City, State\",\n        \"price\": 101000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 9,\n        \"images\": null\n    }\n]"
+				},
+				{
+					"name": "range price & location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/property?Address=city&minPrice=100000&maxPrice=101000",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property"
+							],
+							"query": [
+								{
+									"key": "Address",
+									"value": "city"
+								},
+								{
+									"key": "minPrice",
+									"value": "100000"
+								},
+								{
+									"key": "maxPrice",
+									"value": "101000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 01:10:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idProperty\": 601,\n        \"name\": \"Property 1\",\n        \"address\": \"Address 1, City, State\",\n        \"price\": 101000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 9,\n        \"images\": null\n    }\n]"
+				},
+				{
+					"name": "Without filters",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/wallpaperflare.com_wallpaper.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/property",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"property"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 01:11:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idProperty\": 601,\n        \"name\": \"Property 1\",\n        \"address\": \"Address 1, City, State\",\n        \"price\": 101000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 602,\n        \"name\": \"Property 2\",\n        \"address\": \"Address 2, City, State\",\n        \"price\": 102000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 603,\n        \"name\": \"Property 3\",\n        \"address\": \"Address 3, City, State\",\n        \"price\": 103000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 604,\n        \"name\": \"Property 4\",\n        \"address\": \"Address 4, City, State\",\n        \"price\": 104000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 605,\n        \"name\": \"Property 5\",\n        \"address\": \"Address 5, City, State\",\n        \"price\": 105000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 606,\n        \"name\": \"Property 6\",\n        \"address\": \"Address 6, City, State\",\n        \"price\": 106000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 607,\n        \"name\": \"Property 7\",\n        \"address\": \"Address 7, City, State\",\n        \"price\": 107000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 608,\n        \"name\": \"Property 8\",\n        \"address\": \"Address 8, City, State\",\n        \"price\": 108000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 609,\n        \"name\": \"Property 9\",\n        \"address\": \"Address 9, City, State\",\n        \"price\": 109000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 610,\n        \"name\": \"Property 10\",\n        \"address\": \"Address 10, City, State\",\n        \"price\": 110000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 611,\n        \"name\": \"Property 11\",\n        \"address\": \"Address 11, City, State\",\n        \"price\": 111000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 612,\n        \"name\": \"Property 12\",\n        \"address\": \"Address 12, City, State\",\n        \"price\": 112000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 613,\n        \"name\": \"Property 13\",\n        \"address\": \"Address 13, City, State\",\n        \"price\": 113000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 614,\n        \"name\": \"Property 14\",\n        \"address\": \"Address 14, City, State\",\n        \"price\": 114000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 615,\n        \"name\": \"Property 15\",\n        \"address\": \"Address 15, City, State\",\n        \"price\": 115000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 616,\n        \"name\": \"Property 16\",\n        \"address\": \"Address 16, City, State\",\n        \"price\": 116000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 617,\n        \"name\": \"Property 17\",\n        \"address\": \"Address 17, City, State\",\n        \"price\": 117000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 618,\n        \"name\": \"Property 18\",\n        \"address\": \"Address 18, City, State\",\n        \"price\": 118000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 619,\n        \"name\": \"Property 19\",\n        \"address\": \"Address 19, City, State\",\n        \"price\": 119000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 620,\n        \"name\": \"Property 20\",\n        \"address\": \"Address 20, City, State\",\n        \"price\": 120000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 621,\n        \"name\": \"Property 21\",\n        \"address\": \"Address 21, City, State\",\n        \"price\": 121000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 622,\n        \"name\": \"Property 22\",\n        \"address\": \"Address 22, City, State\",\n        \"price\": 122000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 623,\n        \"name\": \"Property 23\",\n        \"address\": \"Address 23, City, State\",\n        \"price\": 123000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 624,\n        \"name\": \"Property 24\",\n        \"address\": \"Address 24, City, State\",\n        \"price\": 124000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 625,\n        \"name\": \"Property 25\",\n        \"address\": \"Address 25, City, State\",\n        \"price\": 125000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 626,\n        \"name\": \"Property 26\",\n        \"address\": \"Address 26, City, State\",\n        \"price\": 126000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 627,\n        \"name\": \"Property 27\",\n        \"address\": \"Address 27, City, State\",\n        \"price\": 127000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 628,\n        \"name\": \"Property 28\",\n        \"address\": \"Address 28, City, State\",\n        \"price\": 128000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 629,\n        \"name\": \"Property 29\",\n        \"address\": \"Address 29, City, State\",\n        \"price\": 129000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 630,\n        \"name\": \"Property 30\",\n        \"address\": \"Address 30, City, State\",\n        \"price\": 130000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 631,\n        \"name\": \"Property 31\",\n        \"address\": \"Address 31, City, State\",\n        \"price\": 131000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 632,\n        \"name\": \"Property 32\",\n        \"address\": \"Address 32, City, State\",\n        \"price\": 132000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 633,\n        \"name\": \"Property 33\",\n        \"address\": \"Address 33, City, State\",\n        \"price\": 133000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 634,\n        \"name\": \"Property 34\",\n        \"address\": \"Address 34, City, State\",\n        \"price\": 134000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 635,\n        \"name\": \"Property 35\",\n        \"address\": \"Address 35, City, State\",\n        \"price\": 135000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 636,\n        \"name\": \"Property 36\",\n        \"address\": \"Address 36, City, State\",\n        \"price\": 136000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 637,\n        \"name\": \"Property 37\",\n        \"address\": \"Address 37, City, State\",\n        \"price\": 137000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 638,\n        \"name\": \"Property 38\",\n        \"address\": \"Address 38, City, State\",\n        \"price\": 138000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 639,\n        \"name\": \"Property 39\",\n        \"address\": \"Address 39, City, State\",\n        \"price\": 139000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 640,\n        \"name\": \"Property 40\",\n        \"address\": \"Address 40, City, State\",\n        \"price\": 140000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 641,\n        \"name\": \"Property 41\",\n        \"address\": \"Address 41, City, State\",\n        \"price\": 141000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 642,\n        \"name\": \"Property 42\",\n        \"address\": \"Address 42, City, State\",\n        \"price\": 142000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 643,\n        \"name\": \"Property 43\",\n        \"address\": \"Address 43, City, State\",\n        \"price\": 143000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 644,\n        \"name\": \"Property 44\",\n        \"address\": \"Address 44, City, State\",\n        \"price\": 144000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 645,\n        \"name\": \"Property 45\",\n        \"address\": \"Address 45, City, State\",\n        \"price\": 145000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 646,\n        \"name\": \"Property 46\",\n        \"address\": \"Address 46, City, State\",\n        \"price\": 146000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 647,\n        \"name\": \"Property 47\",\n        \"address\": \"Address 47, City, State\",\n        \"price\": 147000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 648,\n        \"name\": \"Property 48\",\n        \"address\": \"Address 48, City, State\",\n        \"price\": 148000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 649,\n        \"name\": \"Property 49\",\n        \"address\": \"Address 49, City, State\",\n        \"price\": 149000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 650,\n        \"name\": \"Property 50\",\n        \"address\": \"Address 50, City, State\",\n        \"price\": 150000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 651,\n        \"name\": \"Property 51\",\n        \"address\": \"Address 51, City, State\",\n        \"price\": 151000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 652,\n        \"name\": \"Property 52\",\n        \"address\": \"Address 52, City, State\",\n        \"price\": 152000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 653,\n        \"name\": \"Property 53\",\n        \"address\": \"Address 53, City, State\",\n        \"price\": 153000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 654,\n        \"name\": \"Property 54\",\n        \"address\": \"Address 54, City, State\",\n        \"price\": 154000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 655,\n        \"name\": \"Property 55\",\n        \"address\": \"Address 55, City, State\",\n        \"price\": 155000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 656,\n        \"name\": \"Property 56\",\n        \"address\": \"Address 56, City, State\",\n        \"price\": 156000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 657,\n        \"name\": \"Property 57\",\n        \"address\": \"Address 57, City, State\",\n        \"price\": 157000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 658,\n        \"name\": \"Property 58\",\n        \"address\": \"Address 58, City, State\",\n        \"price\": 158000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 659,\n        \"name\": \"Property 59\",\n        \"address\": \"Address 59, City, State\",\n        \"price\": 159000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 660,\n        \"name\": \"Property 60\",\n        \"address\": \"Address 60, City, State\",\n        \"price\": 160000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 661,\n        \"name\": \"Property 61\",\n        \"address\": \"Address 61, City, State\",\n        \"price\": 161000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 662,\n        \"name\": \"Property 62\",\n        \"address\": \"Address 62, City, State\",\n        \"price\": 162000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 663,\n        \"name\": \"Property 63\",\n        \"address\": \"Address 63, City, State\",\n        \"price\": 163000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 664,\n        \"name\": \"Property 64\",\n        \"address\": \"Address 64, City, State\",\n        \"price\": 164000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 665,\n        \"name\": \"Property 65\",\n        \"address\": \"Address 65, City, State\",\n        \"price\": 165000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 666,\n        \"name\": \"Property 66\",\n        \"address\": \"Address 66, City, State\",\n        \"price\": 166000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 667,\n        \"name\": \"Property 67\",\n        \"address\": \"Address 67, City, State\",\n        \"price\": 167000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 668,\n        \"name\": \"Property 68\",\n        \"address\": \"Address 68, City, State\",\n        \"price\": 168000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 669,\n        \"name\": \"Property 69\",\n        \"address\": \"Address 69, City, State\",\n        \"price\": 169000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 670,\n        \"name\": \"Property 70\",\n        \"address\": \"Address 70, City, State\",\n        \"price\": 170000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 671,\n        \"name\": \"Property 71\",\n        \"address\": \"Address 71, City, State\",\n        \"price\": 171000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 672,\n        \"name\": \"Property 72\",\n        \"address\": \"Address 72, City, State\",\n        \"price\": 172000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 673,\n        \"name\": \"Property 73\",\n        \"address\": \"Address 73, City, State\",\n        \"price\": 173000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 674,\n        \"name\": \"Property 74\",\n        \"address\": \"Address 74, City, State\",\n        \"price\": 174000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 675,\n        \"name\": \"Property 75\",\n        \"address\": \"Address 75, City, State\",\n        \"price\": 175000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 676,\n        \"name\": \"Property 76\",\n        \"address\": \"Address 76, City, State\",\n        \"price\": 176000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 677,\n        \"name\": \"Property 77\",\n        \"address\": \"Address 77, City, State\",\n        \"price\": 177000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 678,\n        \"name\": \"Property 78\",\n        \"address\": \"Address 78, City, State\",\n        \"price\": 178000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 679,\n        \"name\": \"Property 79\",\n        \"address\": \"Address 79, City, State\",\n        \"price\": 179000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 680,\n        \"name\": \"Property 80\",\n        \"address\": \"Address 80, City, State\",\n        \"price\": 180000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 681,\n        \"name\": \"Property 81\",\n        \"address\": \"Address 81, City, State\",\n        \"price\": 181000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 682,\n        \"name\": \"Property 82\",\n        \"address\": \"Address 82, City, State\",\n        \"price\": 182000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 683,\n        \"name\": \"Property 83\",\n        \"address\": \"Address 83, City, State\",\n        \"price\": 183000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 684,\n        \"name\": \"Property 84\",\n        \"address\": \"Address 84, City, State\",\n        \"price\": 184000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 685,\n        \"name\": \"Property 85\",\n        \"address\": \"Address 85, City, State\",\n        \"price\": 185000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 686,\n        \"name\": \"Property 86\",\n        \"address\": \"Address 86, City, State\",\n        \"price\": 186000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 687,\n        \"name\": \"Property 87\",\n        \"address\": \"Address 87, City, State\",\n        \"price\": 187000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 688,\n        \"name\": \"Property 88\",\n        \"address\": \"Address 88, City, State\",\n        \"price\": 188000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 689,\n        \"name\": \"Property 89\",\n        \"address\": \"Address 89, City, State\",\n        \"price\": 189000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 690,\n        \"name\": \"Property 90\",\n        \"address\": \"Address 90, City, State\",\n        \"price\": 190000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 691,\n        \"name\": \"Property 91\",\n        \"address\": \"Address 91, City, State\",\n        \"price\": 191000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 692,\n        \"name\": \"Property 92\",\n        \"address\": \"Address 92, City, State\",\n        \"price\": 192000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 693,\n        \"name\": \"Property 93\",\n        \"address\": \"Address 93, City, State\",\n        \"price\": 193000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 694,\n        \"name\": \"Property 94\",\n        \"address\": \"Address 94, City, State\",\n        \"price\": 194000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 695,\n        \"name\": \"Property 95\",\n        \"address\": \"Address 95, City, State\",\n        \"price\": 195000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 696,\n        \"name\": \"Property 96\",\n        \"address\": \"Address 96, City, State\",\n        \"price\": 196000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 697,\n        \"name\": \"Property 97\",\n        \"address\": \"Address 97, City, State\",\n        \"price\": 197000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 698,\n        \"name\": \"Property 98\",\n        \"address\": \"Address 98, City, State\",\n        \"price\": 198000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 699,\n        \"name\": \"Property 99\",\n        \"address\": \"Address 99, City, State\",\n        \"price\": 199000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 700,\n        \"name\": \"Property 100\",\n        \"address\": \"Address 100, City, State\",\n        \"price\": 200000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 701,\n        \"name\": \"Property 101\",\n        \"address\": \"Address 101, City, State\",\n        \"price\": 201000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 702,\n        \"name\": \"Property 102\",\n        \"address\": \"Address 102, City, State\",\n        \"price\": 202000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 703,\n        \"name\": \"Property 103\",\n        \"address\": \"Address 103, City, State\",\n        \"price\": 203000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 704,\n        \"name\": \"Property 104\",\n        \"address\": \"Address 104, City, State\",\n        \"price\": 204000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 705,\n        \"name\": \"Property 105\",\n        \"address\": \"Address 105, City, State\",\n        \"price\": 205000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 706,\n        \"name\": \"Property 106\",\n        \"address\": \"Address 106, City, State\",\n        \"price\": 206000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 707,\n        \"name\": \"Property 107\",\n        \"address\": \"Address 107, City, State\",\n        \"price\": 207000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 708,\n        \"name\": \"Property 108\",\n        \"address\": \"Address 108, City, State\",\n        \"price\": 208000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 709,\n        \"name\": \"Property 109\",\n        \"address\": \"Address 109, City, State\",\n        \"price\": 209000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 710,\n        \"name\": \"Property 110\",\n        \"address\": \"Address 110, City, State\",\n        \"price\": 210000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 711,\n        \"name\": \"Property 111\",\n        \"address\": \"Address 111, City, State\",\n        \"price\": 211000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 712,\n        \"name\": \"Property 112\",\n        \"address\": \"Address 112, City, State\",\n        \"price\": 212000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 713,\n        \"name\": \"Property 113\",\n        \"address\": \"Address 113, City, State\",\n        \"price\": 213000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 714,\n        \"name\": \"Property 114\",\n        \"address\": \"Address 114, City, State\",\n        \"price\": 214000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 715,\n        \"name\": \"Property 115\",\n        \"address\": \"Address 115, City, State\",\n        \"price\": 215000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 716,\n        \"name\": \"Property 116\",\n        \"address\": \"Address 116, City, State\",\n        \"price\": 216000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 717,\n        \"name\": \"Property 117\",\n        \"address\": \"Address 117, City, State\",\n        \"price\": 217000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 718,\n        \"name\": \"Property 118\",\n        \"address\": \"Address 118, City, State\",\n        \"price\": 218000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 719,\n        \"name\": \"Property 119\",\n        \"address\": \"Address 119, City, State\",\n        \"price\": 219000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 720,\n        \"name\": \"Property 120\",\n        \"address\": \"Address 120, City, State\",\n        \"price\": 220000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 721,\n        \"name\": \"Property 121\",\n        \"address\": \"Address 121, City, State\",\n        \"price\": 221000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 722,\n        \"name\": \"Property 122\",\n        \"address\": \"Address 122, City, State\",\n        \"price\": 222000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 723,\n        \"name\": \"Property 123\",\n        \"address\": \"Address 123, City, State\",\n        \"price\": 223000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 724,\n        \"name\": \"Property 124\",\n        \"address\": \"Address 124, City, State\",\n        \"price\": 224000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 725,\n        \"name\": \"Property 125\",\n        \"address\": \"Address 125, City, State\",\n        \"price\": 225000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 726,\n        \"name\": \"Property 126\",\n        \"address\": \"Address 126, City, State\",\n        \"price\": 226000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 727,\n        \"name\": \"Property 127\",\n        \"address\": \"Address 127, City, State\",\n        \"price\": 227000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 728,\n        \"name\": \"Property 128\",\n        \"address\": \"Address 128, City, State\",\n        \"price\": 228000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 729,\n        \"name\": \"Property 129\",\n        \"address\": \"Address 129, City, State\",\n        \"price\": 229000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 730,\n        \"name\": \"Property 130\",\n        \"address\": \"Address 130, City, State\",\n        \"price\": 230000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 731,\n        \"name\": \"Property 131\",\n        \"address\": \"Address 131, City, State\",\n        \"price\": 231000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 732,\n        \"name\": \"Property 132\",\n        \"address\": \"Address 132, City, State\",\n        \"price\": 232000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 733,\n        \"name\": \"Property 133\",\n        \"address\": \"Address 133, City, State\",\n        \"price\": 233000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 734,\n        \"name\": \"Property 134\",\n        \"address\": \"Address 134, City, State\",\n        \"price\": 234000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 735,\n        \"name\": \"Property 135\",\n        \"address\": \"Address 135, City, State\",\n        \"price\": 235000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 736,\n        \"name\": \"Property 136\",\n        \"address\": \"Address 136, City, State\",\n        \"price\": 236000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 737,\n        \"name\": \"Property 137\",\n        \"address\": \"Address 137, City, State\",\n        \"price\": 237000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 738,\n        \"name\": \"Property 138\",\n        \"address\": \"Address 138, City, State\",\n        \"price\": 238000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 739,\n        \"name\": \"Property 139\",\n        \"address\": \"Address 139, City, State\",\n        \"price\": 239000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 740,\n        \"name\": \"Property 140\",\n        \"address\": \"Address 140, City, State\",\n        \"price\": 240000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 741,\n        \"name\": \"Property 141\",\n        \"address\": \"Address 141, City, State\",\n        \"price\": 241000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 742,\n        \"name\": \"Property 142\",\n        \"address\": \"Address 142, City, State\",\n        \"price\": 242000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 743,\n        \"name\": \"Property 143\",\n        \"address\": \"Address 143, City, State\",\n        \"price\": 243000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 744,\n        \"name\": \"Property 144\",\n        \"address\": \"Address 144, City, State\",\n        \"price\": 244000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 745,\n        \"name\": \"Property 145\",\n        \"address\": \"Address 145, City, State\",\n        \"price\": 245000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 746,\n        \"name\": \"Property 146\",\n        \"address\": \"Address 146, City, State\",\n        \"price\": 246000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 747,\n        \"name\": \"Property 147\",\n        \"address\": \"Address 147, City, State\",\n        \"price\": 247000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 748,\n        \"name\": \"Property 148\",\n        \"address\": \"Address 148, City, State\",\n        \"price\": 248000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 749,\n        \"name\": \"Property 149\",\n        \"address\": \"Address 149, City, State\",\n        \"price\": 249000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 750,\n        \"name\": \"Property 150\",\n        \"address\": \"Address 150, City, State\",\n        \"price\": 250000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 751,\n        \"name\": \"Property 151\",\n        \"address\": \"Address 151, City, State\",\n        \"price\": 251000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 752,\n        \"name\": \"Property 152\",\n        \"address\": \"Address 152, City, State\",\n        \"price\": 252000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 753,\n        \"name\": \"Property 153\",\n        \"address\": \"Address 153, City, State\",\n        \"price\": 253000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 754,\n        \"name\": \"Property 154\",\n        \"address\": \"Address 154, City, State\",\n        \"price\": 254000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 755,\n        \"name\": \"Property 155\",\n        \"address\": \"Address 155, City, State\",\n        \"price\": 255000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 756,\n        \"name\": \"Property 156\",\n        \"address\": \"Address 156, City, State\",\n        \"price\": 256000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 757,\n        \"name\": \"Property 157\",\n        \"address\": \"Address 157, City, State\",\n        \"price\": 257000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 758,\n        \"name\": \"Property 158\",\n        \"address\": \"Address 158, City, State\",\n        \"price\": 258000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 759,\n        \"name\": \"Property 159\",\n        \"address\": \"Address 159, City, State\",\n        \"price\": 259000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 760,\n        \"name\": \"Property 160\",\n        \"address\": \"Address 160, City, State\",\n        \"price\": 260000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 761,\n        \"name\": \"Property 161\",\n        \"address\": \"Address 161, City, State\",\n        \"price\": 261000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 762,\n        \"name\": \"Property 162\",\n        \"address\": \"Address 162, City, State\",\n        \"price\": 262000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 763,\n        \"name\": \"Property 163\",\n        \"address\": \"Address 163, City, State\",\n        \"price\": 263000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 764,\n        \"name\": \"Property 164\",\n        \"address\": \"Address 164, City, State\",\n        \"price\": 264000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 765,\n        \"name\": \"Property 165\",\n        \"address\": \"Address 165, City, State\",\n        \"price\": 265000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 766,\n        \"name\": \"Property 166\",\n        \"address\": \"Address 166, City, State\",\n        \"price\": 266000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 767,\n        \"name\": \"Property 167\",\n        \"address\": \"Address 167, City, State\",\n        \"price\": 267000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 768,\n        \"name\": \"Property 168\",\n        \"address\": \"Address 168, City, State\",\n        \"price\": 268000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 769,\n        \"name\": \"Property 169\",\n        \"address\": \"Address 169, City, State\",\n        \"price\": 269000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 770,\n        \"name\": \"Property 170\",\n        \"address\": \"Address 170, City, State\",\n        \"price\": 270000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 771,\n        \"name\": \"Property 171\",\n        \"address\": \"Address 171, City, State\",\n        \"price\": 271000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 772,\n        \"name\": \"Property 172\",\n        \"address\": \"Address 172, City, State\",\n        \"price\": 272000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 773,\n        \"name\": \"Property 173\",\n        \"address\": \"Address 173, City, State\",\n        \"price\": 273000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 774,\n        \"name\": \"Property 174\",\n        \"address\": \"Address 174, City, State\",\n        \"price\": 274000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 775,\n        \"name\": \"Property 175\",\n        \"address\": \"Address 175, City, State\",\n        \"price\": 275000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 776,\n        \"name\": \"Property 176\",\n        \"address\": \"Address 176, City, State\",\n        \"price\": 276000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 777,\n        \"name\": \"Property 177\",\n        \"address\": \"Address 177, City, State\",\n        \"price\": 277000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 778,\n        \"name\": \"Property 178\",\n        \"address\": \"Address 178, City, State\",\n        \"price\": 278000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 779,\n        \"name\": \"Property 179\",\n        \"address\": \"Address 179, City, State\",\n        \"price\": 279000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 780,\n        \"name\": \"Property 180\",\n        \"address\": \"Address 180, City, State\",\n        \"price\": 280000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 781,\n        \"name\": \"Property 181\",\n        \"address\": \"Address 181, City, State\",\n        \"price\": 281000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 782,\n        \"name\": \"Property 182\",\n        \"address\": \"Address 182, City, State\",\n        \"price\": 282000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 783,\n        \"name\": \"Property 183\",\n        \"address\": \"Address 183, City, State\",\n        \"price\": 283000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 784,\n        \"name\": \"Property 184\",\n        \"address\": \"Address 184, City, State\",\n        \"price\": 284000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 785,\n        \"name\": \"Property 185\",\n        \"address\": \"Address 185, City, State\",\n        \"price\": 285000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 786,\n        \"name\": \"Property 186\",\n        \"address\": \"Address 186, City, State\",\n        \"price\": 286000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 787,\n        \"name\": \"Property 187\",\n        \"address\": \"Address 187, City, State\",\n        \"price\": 287000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 788,\n        \"name\": \"Property 188\",\n        \"address\": \"Address 188, City, State\",\n        \"price\": 288000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 789,\n        \"name\": \"Property 189\",\n        \"address\": \"Address 189, City, State\",\n        \"price\": 289000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 790,\n        \"name\": \"Property 190\",\n        \"address\": \"Address 190, City, State\",\n        \"price\": 290000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 791,\n        \"name\": \"Property 191\",\n        \"address\": \"Address 191, City, State\",\n        \"price\": 291000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 792,\n        \"name\": \"Property 192\",\n        \"address\": \"Address 192, City, State\",\n        \"price\": 292000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 793,\n        \"name\": \"Property 193\",\n        \"address\": \"Address 193, City, State\",\n        \"price\": 293000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 794,\n        \"name\": \"Property 194\",\n        \"address\": \"Address 194, City, State\",\n        \"price\": 294000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 795,\n        \"name\": \"Property 195\",\n        \"address\": \"Address 195, City, State\",\n        \"price\": 295000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 796,\n        \"name\": \"Property 196\",\n        \"address\": \"Address 196, City, State\",\n        \"price\": 296000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 797,\n        \"name\": \"Property 197\",\n        \"address\": \"Address 197, City, State\",\n        \"price\": 297000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 798,\n        \"name\": \"Property 198\",\n        \"address\": \"Address 198, City, State\",\n        \"price\": 298000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 799,\n        \"name\": \"Property 199\",\n        \"address\": \"Address 199, City, State\",\n        \"price\": 299000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 800,\n        \"name\": \"Property 200\",\n        \"address\": \"Address 200, City, State\",\n        \"price\": 300000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 801,\n        \"name\": \"Property 201\",\n        \"address\": \"Address 201, City, State\",\n        \"price\": 301000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 802,\n        \"name\": \"Property 202\",\n        \"address\": \"Address 202, City, State\",\n        \"price\": 302000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 803,\n        \"name\": \"Property 203\",\n        \"address\": \"Address 203, City, State\",\n        \"price\": 303000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 804,\n        \"name\": \"Property 204\",\n        \"address\": \"Address 204, City, State\",\n        \"price\": 304000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 805,\n        \"name\": \"Property 205\",\n        \"address\": \"Address 205, City, State\",\n        \"price\": 305000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 806,\n        \"name\": \"Property 206\",\n        \"address\": \"Address 206, City, State\",\n        \"price\": 306000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 807,\n        \"name\": \"Property 207\",\n        \"address\": \"Address 207, City, State\",\n        \"price\": 307000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 808,\n        \"name\": \"Property 208\",\n        \"address\": \"Address 208, City, State\",\n        \"price\": 308000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 809,\n        \"name\": \"Property 209\",\n        \"address\": \"Address 209, City, State\",\n        \"price\": 309000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 810,\n        \"name\": \"Property 210\",\n        \"address\": \"Address 210, City, State\",\n        \"price\": 310000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 811,\n        \"name\": \"Property 211\",\n        \"address\": \"Address 211, City, State\",\n        \"price\": 311000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 812,\n        \"name\": \"Property 212\",\n        \"address\": \"Address 212, City, State\",\n        \"price\": 312000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 813,\n        \"name\": \"Property 213\",\n        \"address\": \"Address 213, City, State\",\n        \"price\": 313000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 814,\n        \"name\": \"Property 214\",\n        \"address\": \"Address 214, City, State\",\n        \"price\": 314000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 815,\n        \"name\": \"Property 215\",\n        \"address\": \"Address 215, City, State\",\n        \"price\": 315000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 816,\n        \"name\": \"Property 216\",\n        \"address\": \"Address 216, City, State\",\n        \"price\": 316000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 817,\n        \"name\": \"Property 217\",\n        \"address\": \"Address 217, City, State\",\n        \"price\": 317000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 818,\n        \"name\": \"Property 218\",\n        \"address\": \"Address 218, City, State\",\n        \"price\": 318000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 819,\n        \"name\": \"Property 219\",\n        \"address\": \"Address 219, City, State\",\n        \"price\": 319000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 820,\n        \"name\": \"Property 220\",\n        \"address\": \"Address 220, City, State\",\n        \"price\": 320000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 821,\n        \"name\": \"Property 221\",\n        \"address\": \"Address 221, City, State\",\n        \"price\": 321000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 822,\n        \"name\": \"Property 222\",\n        \"address\": \"Address 222, City, State\",\n        \"price\": 322000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 823,\n        \"name\": \"Property 223\",\n        \"address\": \"Address 223, City, State\",\n        \"price\": 323000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 824,\n        \"name\": \"Property 224\",\n        \"address\": \"Address 224, City, State\",\n        \"price\": 324000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 825,\n        \"name\": \"Property 225\",\n        \"address\": \"Address 225, City, State\",\n        \"price\": 325000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 826,\n        \"name\": \"Property 226\",\n        \"address\": \"Address 226, City, State\",\n        \"price\": 326000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 827,\n        \"name\": \"Property 227\",\n        \"address\": \"Address 227, City, State\",\n        \"price\": 327000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 828,\n        \"name\": \"Property 228\",\n        \"address\": \"Address 228, City, State\",\n        \"price\": 328000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 829,\n        \"name\": \"Property 229\",\n        \"address\": \"Address 229, City, State\",\n        \"price\": 329000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 830,\n        \"name\": \"Property 230\",\n        \"address\": \"Address 230, City, State\",\n        \"price\": 330000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 831,\n        \"name\": \"Property 231\",\n        \"address\": \"Address 231, City, State\",\n        \"price\": 331000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 832,\n        \"name\": \"Property 232\",\n        \"address\": \"Address 232, City, State\",\n        \"price\": 332000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 833,\n        \"name\": \"Property 233\",\n        \"address\": \"Address 233, City, State\",\n        \"price\": 333000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 834,\n        \"name\": \"Property 234\",\n        \"address\": \"Address 234, City, State\",\n        \"price\": 334000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 835,\n        \"name\": \"Property 235\",\n        \"address\": \"Address 235, City, State\",\n        \"price\": 335000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 836,\n        \"name\": \"Property 236\",\n        \"address\": \"Address 236, City, State\",\n        \"price\": 336000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 837,\n        \"name\": \"Property 237\",\n        \"address\": \"Address 237, City, State\",\n        \"price\": 337000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 838,\n        \"name\": \"Property 238\",\n        \"address\": \"Address 238, City, State\",\n        \"price\": 338000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 839,\n        \"name\": \"Property 239\",\n        \"address\": \"Address 239, City, State\",\n        \"price\": 339000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 840,\n        \"name\": \"Property 240\",\n        \"address\": \"Address 240, City, State\",\n        \"price\": 340000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 841,\n        \"name\": \"Property 241\",\n        \"address\": \"Address 241, City, State\",\n        \"price\": 341000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 842,\n        \"name\": \"Property 242\",\n        \"address\": \"Address 242, City, State\",\n        \"price\": 342000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 843,\n        \"name\": \"Property 243\",\n        \"address\": \"Address 243, City, State\",\n        \"price\": 343000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 844,\n        \"name\": \"Property 244\",\n        \"address\": \"Address 244, City, State\",\n        \"price\": 344000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 845,\n        \"name\": \"Property 245\",\n        \"address\": \"Address 245, City, State\",\n        \"price\": 345000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 846,\n        \"name\": \"Property 246\",\n        \"address\": \"Address 246, City, State\",\n        \"price\": 346000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 847,\n        \"name\": \"Property 247\",\n        \"address\": \"Address 247, City, State\",\n        \"price\": 347000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 848,\n        \"name\": \"Property 248\",\n        \"address\": \"Address 248, City, State\",\n        \"price\": 348000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 849,\n        \"name\": \"Property 249\",\n        \"address\": \"Address 249, City, State\",\n        \"price\": 349000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 850,\n        \"name\": \"Property 250\",\n        \"address\": \"Address 250, City, State\",\n        \"price\": 350000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 851,\n        \"name\": \"Property 251\",\n        \"address\": \"Address 251, City, State\",\n        \"price\": 351000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 852,\n        \"name\": \"Property 252\",\n        \"address\": \"Address 252, City, State\",\n        \"price\": 352000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 853,\n        \"name\": \"Property 253\",\n        \"address\": \"Address 253, City, State\",\n        \"price\": 353000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 854,\n        \"name\": \"Property 254\",\n        \"address\": \"Address 254, City, State\",\n        \"price\": 354000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 855,\n        \"name\": \"Property 255\",\n        \"address\": \"Address 255, City, State\",\n        \"price\": 355000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 856,\n        \"name\": \"Property 256\",\n        \"address\": \"Address 256, City, State\",\n        \"price\": 356000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 857,\n        \"name\": \"Property 257\",\n        \"address\": \"Address 257, City, State\",\n        \"price\": 357000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 858,\n        \"name\": \"Property 258\",\n        \"address\": \"Address 258, City, State\",\n        \"price\": 358000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 859,\n        \"name\": \"Property 259\",\n        \"address\": \"Address 259, City, State\",\n        \"price\": 359000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 860,\n        \"name\": \"Property 260\",\n        \"address\": \"Address 260, City, State\",\n        \"price\": 360000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 861,\n        \"name\": \"Property 261\",\n        \"address\": \"Address 261, City, State\",\n        \"price\": 361000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 862,\n        \"name\": \"Property 262\",\n        \"address\": \"Address 262, City, State\",\n        \"price\": 362000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 863,\n        \"name\": \"Property 263\",\n        \"address\": \"Address 263, City, State\",\n        \"price\": 363000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 864,\n        \"name\": \"Property 264\",\n        \"address\": \"Address 264, City, State\",\n        \"price\": 364000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 865,\n        \"name\": \"Property 265\",\n        \"address\": \"Address 265, City, State\",\n        \"price\": 365000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 866,\n        \"name\": \"Property 266\",\n        \"address\": \"Address 266, City, State\",\n        \"price\": 366000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 867,\n        \"name\": \"Property 267\",\n        \"address\": \"Address 267, City, State\",\n        \"price\": 367000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 5,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 868,\n        \"name\": \"Property 268\",\n        \"address\": \"Address 268, City, State\",\n        \"price\": 368000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 869,\n        \"name\": \"Property 269\",\n        \"address\": \"Address 269, City, State\",\n        \"price\": 369000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 870,\n        \"name\": \"Property 270\",\n        \"address\": \"Address 270, City, State\",\n        \"price\": 370000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 871,\n        \"name\": \"Property 271\",\n        \"address\": \"Address 271, City, State\",\n        \"price\": 371000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 872,\n        \"name\": \"Property 272\",\n        \"address\": \"Address 272, City, State\",\n        \"price\": 372000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 873,\n        \"name\": \"Property 273\",\n        \"address\": \"Address 273, City, State\",\n        \"price\": 373000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 874,\n        \"name\": \"Property 274\",\n        \"address\": \"Address 274, City, State\",\n        \"price\": 374000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 875,\n        \"name\": \"Property 275\",\n        \"address\": \"Address 275, City, State\",\n        \"price\": 375000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 876,\n        \"name\": \"Property 276\",\n        \"address\": \"Address 276, City, State\",\n        \"price\": 376000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 877,\n        \"name\": \"Property 277\",\n        \"address\": \"Address 277, City, State\",\n        \"price\": 377000,\n        \"codeInternal\": null,\n        \"year\": 2021,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 878,\n        \"name\": \"Property 278\",\n        \"address\": \"Address 278, City, State\",\n        \"price\": 378000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 879,\n        \"name\": \"Property 279\",\n        \"address\": \"Address 279, City, State\",\n        \"price\": 379000,\n        \"codeInternal\": null,\n        \"year\": 2022,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 880,\n        \"name\": \"Property 280\",\n        \"address\": \"Address 280, City, State\",\n        \"price\": 380000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 881,\n        \"name\": \"Property 281\",\n        \"address\": \"Address 281, City, State\",\n        \"price\": 381000,\n        \"codeInternal\": null,\n        \"year\": 2013,\n        \"idOwner\": 2,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 882,\n        \"name\": \"Property 282\",\n        \"address\": \"Address 282, City, State\",\n        \"price\": 382000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 883,\n        \"name\": \"Property 283\",\n        \"address\": \"Address 283, City, State\",\n        \"price\": 383000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 884,\n        \"name\": \"Property 284\",\n        \"address\": \"Address 284, City, State\",\n        \"price\": 384000,\n        \"codeInternal\": null,\n        \"year\": 2018,\n        \"idOwner\": 8,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 885,\n        \"name\": \"Property 285\",\n        \"address\": \"Address 285, City, State\",\n        \"price\": 385000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 886,\n        \"name\": \"Property 286\",\n        \"address\": \"Address 286, City, State\",\n        \"price\": 386000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 9,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 887,\n        \"name\": \"Property 287\",\n        \"address\": \"Address 287, City, State\",\n        \"price\": 387000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 7,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 888,\n        \"name\": \"Property 288\",\n        \"address\": \"Address 288, City, State\",\n        \"price\": 388000,\n        \"codeInternal\": null,\n        \"year\": 2016,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 889,\n        \"name\": \"Property 289\",\n        \"address\": \"Address 289, City, State\",\n        \"price\": 389000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 890,\n        \"name\": \"Property 290\",\n        \"address\": \"Address 290, City, State\",\n        \"price\": 390000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 891,\n        \"name\": \"Property 291\",\n        \"address\": \"Address 291, City, State\",\n        \"price\": 391000,\n        \"codeInternal\": null,\n        \"year\": 2012,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 892,\n        \"name\": \"Property 292\",\n        \"address\": \"Address 292, City, State\",\n        \"price\": 392000,\n        \"codeInternal\": null,\n        \"year\": 2019,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 893,\n        \"name\": \"Property 293\",\n        \"address\": \"Address 293, City, State\",\n        \"price\": 393000,\n        \"codeInternal\": null,\n        \"year\": 2017,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 894,\n        \"name\": \"Property 294\",\n        \"address\": \"Address 294, City, State\",\n        \"price\": 394000,\n        \"codeInternal\": null,\n        \"year\": 2020,\n        \"idOwner\": 10,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 895,\n        \"name\": \"Property 295\",\n        \"address\": \"Address 295, City, State\",\n        \"price\": 395000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 4,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 896,\n        \"name\": \"Property 296\",\n        \"address\": \"Address 296, City, State\",\n        \"price\": 396000,\n        \"codeInternal\": null,\n        \"year\": 2011,\n        \"idOwner\": 3,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 897,\n        \"name\": \"Property 297\",\n        \"address\": \"Address 297, City, State\",\n        \"price\": 397000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 898,\n        \"name\": \"Property 298\",\n        \"address\": \"Address 298, City, State\",\n        \"price\": 398000,\n        \"codeInternal\": null,\n        \"year\": 2014,\n        \"idOwner\": 6,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 899,\n        \"name\": \"Property 299\",\n        \"address\": \"Address 299, City, State\",\n        \"price\": 399000,\n        \"codeInternal\": null,\n        \"year\": 2010,\n        \"idOwner\": 1,\n        \"images\": null\n    },\n    {\n        \"idProperty\": 900,\n        \"name\": \"Property 300\",\n        \"address\": \"Address 300, City, State\",\n        \"price\": 400000,\n        \"codeInternal\": null,\n        \"year\": 2015,\n        \"idOwner\": 9,\n        \"images\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.collectionVariables.set(\"token\", jsonData.token);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test\",\r\n    \"password\": \"asdasd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/Auth/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

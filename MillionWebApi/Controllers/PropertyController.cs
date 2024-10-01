@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MillionApplication.DTOs;
 using MillionApplication.Interfaces;
+using MillionWebApi.Handlers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,13 +21,19 @@ namespace MillionWebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PropertyDto>>> GetAllPropertiesAsync([FromQuery] PropertyFilterDto filters)
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(IEnumerable<PropertyDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ServiceErrorResponse), StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetAllPropertiesAsync([FromQuery] PropertyFilterDto filters)
         {
             var properties = await _propertyService.GetAllPropertiesAsync(filters);
             return Ok(properties);
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(PropertyDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ServiceErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetPropertyById(int id)
         {
             var property = await _propertyService.GetPropertyByIdAsync(id);
@@ -39,6 +46,9 @@ namespace MillionWebApi.Controllers
         }
 
         [HttpPatch("{id}/price")]
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(PropertyDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ServiceErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdatePropertyPrice(int id, [FromBody] decimal newPrice)
         {
             var updatedProperty = await _propertyService.ChangePropertyPriceAsync(id, newPrice);
@@ -52,6 +62,9 @@ namespace MillionWebApi.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(PropertyDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ServiceErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> AddProperty([FromBody] PropertyDto propertyDto)
         {
             var property = await _propertyService.CreatePropertyAsync(propertyDto);
@@ -59,6 +72,9 @@ namespace MillionWebApi.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(PropertyDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ServiceErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateProperty([FromBody] PropertyDto propertyDto)
         {
             var property = await _propertyService.UpdatePropertyAsync(propertyDto);

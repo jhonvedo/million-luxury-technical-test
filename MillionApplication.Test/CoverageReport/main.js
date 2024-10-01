@@ -231,14 +231,14 @@ var assemblies = [
       { "name": "MillionApplication.Services.PropertyService", "rp": "MillionApplication_PropertyService.html", "cl": 54, "ucl": 0, "cal": 54, "tl": 102, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
-    "name": "MillionCore",
+    "name": "MillionDomain",
     "classes": [
-      { "name": "MillionCore.Entities.Owner", "rp": "MillionCore_Owner.html", "cl": 5, "ucl": 1, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Entities.Property", "rp": "MillionCore_Property.html", "cl": 10, "ucl": 0, "cal": 10, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Entities.PropertyImage", "rp": "MillionCore_PropertyImage.html", "cl": 4, "ucl": 1, "cal": 5, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Entities.PropertyTrace", "rp": "MillionCore_PropertyTrace.html", "cl": 6, "ucl": 1, "cal": 7, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Specifications.BaseSpecification<T>", "rp": "MillionCore_BaseSpecification_1.html", "cl": 4, "ucl": 16, "cal": 20, "tl": 48, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MillionCore.Specifications.PropertyFilterSpecification", "rp": "MillionCore_PropertyFilterSpecification.html", "cl": 33, "ucl": 0, "cal": 33, "tl": 53, "cb": 12, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.Owner", "rp": "MillionDomain_Owner.html", "cl": 5, "ucl": 1, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.Property", "rp": "MillionDomain_Property.html", "cl": 10, "ucl": 0, "cal": 10, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.PropertyImage", "rp": "MillionDomain_PropertyImage.html", "cl": 4, "ucl": 1, "cal": 5, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Entities.PropertyTrace", "rp": "MillionDomain_PropertyTrace.html", "cl": 6, "ucl": 1, "cal": 7, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Specifications.BaseSpecification<T>", "rp": "MillionDomain_BaseSpecification_1.html", "cl": 4, "ucl": 16, "cal": 20, "tl": 48, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MillionDomain.Specifications.PropertyFilterSpecification", "rp": "MillionDomain_PropertyFilterSpecification.html", "cl": 33, "ucl": 0, "cal": 33, "tl": 53, "cb": 12, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 

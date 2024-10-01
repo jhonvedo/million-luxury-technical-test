@@ -1,5 +1,5 @@
-﻿using MillionCore.Entities;
-using MillionCore.Specifications;
+﻿using MillionDomain.Entities;
+using MillionDomain.Specifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
